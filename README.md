@@ -8,4 +8,4 @@ Desenvolvedor: http://adilmar.com.br
 
 Telas
 
-<img src="https://raw.githubusercontent.com/Adilmar/Crush-Rank/master/capturas/01.png"/>
+<img src="https://raw.githubusercontent.com/Adilmar/Crush-Rank/master/capturas/01.png" width="220px"/>
