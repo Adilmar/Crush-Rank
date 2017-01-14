@@ -9,21 +9,23 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#FFFFFF"
     tools:context="com.fenix.crushrank.Main">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:weightSum="1"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:weightSum="1">
+        android:textColor="#FFFFFF"
+        android:layout_alignParentStart="true">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/logo"
+            app:srcCompat="@drawable/logo2"
             android:id="@+id/imageView" />
 
         <EditText
@@ -32,7 +34,7 @@
             android:inputType="textPersonName"
             android:paddingTop="15dp"
             android:paddingBottom="15dp"
-            android:text="@string/Nome"
+            android:hint="@string/Nome"
             android:ems="10"
             android:id="@+id/editText" />
 
@@ -40,10 +42,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="@string/crush"
-
+            android:hint="@string/crush"
             android:ems="10"
             android:id="@+id/editText2" />
+
+        <Button
+            android:text="@string/calcula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@color/colorAccent"
+            android:textColor="#FFFFFF"
+            android:id="@+id/button" />
     </LinearLayout>
 
 </RelativeLayout>

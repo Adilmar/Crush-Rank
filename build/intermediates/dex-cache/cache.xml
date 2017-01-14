@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Adilmar Dantas\Documents\Crush-Rank\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="6d7d803871e3203465f71a163e7af104f807b446">
+        <dex dex="C:\Users\Adilmar Dantas\Documents\Crush-Rank\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.1.1_15db3c1b5dab81dadf6805eed16e707703b47330\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Adilmar Dantas\Documents\Crush-Rank\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="c936c1bd42f0c018c18920c7bec619ef056b24f8">
+        <dex dex="C:\Users\Adilmar Dantas\Documents\Crush-Rank\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.1.1_6d3ffe9638db44b71752bb2c9c3061592357f657\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Adilmar Dantas\Documents\Crush-Rank\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="f62e763609f65e47dc6c498760a4accf02776788">
+        <dex dex="C:\Users\Adilmar Dantas\Documents\Crush-Rank\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.1.1_20d6d837e0505899ab523a9ee226f5edb566a2a2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Adilmar Dantas\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\24.1.1\support-annotations-24.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="3af19f153122737b372622fa6c81dd11a1c6b999">
+        <dex dex="C:\Users\Adilmar Dantas\Documents\Crush-Rank\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.1.1_c89f70b1422ff388986bddd604f29e540858f8ad\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Adilmar Dantas\Documents\Crush-Rank\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\jars\libs\internal_impl-24.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="f78c2f395cb096f9dc1dc07e729922b8fcd3c4f5">
+        <dex dex="C:\Users\Adilmar Dantas\Documents\Crush-Rank\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.1.1_82eafddd55f5f78103e9709664293c85886d962e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Adilmar Dantas\Documents\Crush-Rank\app\build\intermediates\exploded-aar\com.android.volley\volley\1.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="2cd4b982617e544728de0782d718a58ce1b06e3f">
+        <dex dex="C:\Users\Adilmar Dantas\Documents\Crush-Rank\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.volley-volley-1.0.0_d3e6022a25d7e0b640fd2d42df3ab0954a480be5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Adilmar Dantas\Documents\Crush-Rank\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="1256c10604bb098490eab070d76754ac5ceab35c">
+        <dex dex="C:\Users\Adilmar Dantas\Documents\Crush-Rank\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.1.1_41ca8348ed83efa4bcda33c2528d8d0ec120e5d9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Adilmar Dantas\Documents\Crush-Rank\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="569da544dc8be120054ba0b4931fd5d4fcb2a98f">
+        <dex dex="C:\Users\Adilmar Dantas\Documents\Crush-Rank\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_db05e0131d05bd00ab46f6266145a7d15dc02170\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Adilmar Dantas\Documents\Crush-Rank\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="e4ac770285a897dac66499e6f3f87530f92dcbba">
+        <dex dex="C:\Users\Adilmar Dantas\Documents\Crush-Rank\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_a9ed1fcdee9efaea064995920b7fc4a77bbc5062\classes.dex" />
+    </item>
+
+</items>
