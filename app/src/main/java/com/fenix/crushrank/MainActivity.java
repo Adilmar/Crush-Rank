@@ -15,6 +15,11 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.appindexing.Thing;
+import com.google.android.gms.common.api.GoogleApiClient;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -24,9 +29,9 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
-    //String JsonURL="https://love-calculator.p.mashape.com/getPercentage?fname=John&sname=Alice";
+    String JsonURL="https://love-calculator.p.mashape.com/getPercentage?fname=Adilmar&sname=Adrielly";
     TextView results;
-    String JsonURL = "https://raw.githubusercontent.com/ianbar20/JSON-Volley-Tutorial/master/Example-JSON-Files/Example-Object.JSON";
+    //String JsonURL = "https://raw.githubusercontent.com/ianbar20/JSON-Volley-Tutorial/master/Example-JSON-Files/Example-Object.JSON";
     String data = "";
     RequestQueue requestQueue;
 
@@ -39,21 +44,24 @@ public class MainActivity extends AppCompatActivity {
 
         results = (TextView) findViewById(R.id.jsonData);
 
-        JsonObjectRequest obreq = new JsonObjectRequest(Request.Method.GET, JsonURL, null,
+        MyRequest obreq = new MyRequest(Request.Method.GET, JsonURL, null,
                 new Response.Listener<JSONObject>(){
 
 
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-                            JSONObject obj = response.getJSONObject("colorObject");
+                            //JSONObject obj = response.getString();
 
-                            String color = obj.getString("colorName");
-                            String desc = obj.getString("description");
+                            String nome = response.getString("fname");
+                            String crush = response.getString("sname");
+                            String porcentagem = response.getString("percentage");
+                            String resultado = response.getString("result");
 
-                            data += "Color Name: " + color +
-                                    "\n" +
-                                    "Description : " + desc;
+                            data += "\nName: " + nome + "\n" +
+                                    "Crush : " + crush+"\n"+
+                                    "Porcentagem: "+ porcentagem+"%"+ "\n"+
+                                    "Resultado:"+ resultado;
 
                             results.setText(data);
                         }
@@ -73,17 +81,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-//        {
-//
-//
-////            @Override
-////            public Map<String, String> getHeaders() throws AuthFailureError {
-////                Map<String, String>  params = new HashMap<String, String>();
-////                params.put("X-Mashape-Key", "kpJ1ibkBXPmshdrqB9vN27L2KT7Wp1Mbaa6jsnm6vsjMldszQn");
-////                params.put("Accept", "application/json");
-////                return params;
-////            }
-////        };
+
+
 
 
         requestQueue.add(obreq);
