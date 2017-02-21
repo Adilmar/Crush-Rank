@@ -16,11 +16,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:id="@+id/jsonData"
-        android:textColor="#000000"
-        android:layout_alignLeft="@+id/ratingBar"
-        android:layout_alignStart="@+id/ratingBar"
-        android:layout_alignRight="@+id/ratingBar"
-        android:layout_alignEnd="@+id/ratingBar" />
+        android:textColor="#000000" />
 
     <RatingBar
         android:layout_width="wrap_content"
@@ -28,6 +24,10 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="230dp"
-        android:id="@+id/ratingBar" />
+        android:id="@+id/ratingBar"
+        android:isIndicator="true"
+        android:clickable="false"
+        android:focusableInTouchMode="false"
+        android:focusable="false"/>
 
 </RelativeLayout>

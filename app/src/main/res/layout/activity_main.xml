@@ -36,7 +36,7 @@
             android:paddingBottom="15dp"
             android:hint="@string/Nome"
             android:ems="10"
-            android:id="@+id/editText" />
+            android:id="@+id/nome" />
 
         <EditText
             android:layout_width="match_parent"
@@ -44,7 +44,7 @@
             android:inputType="textPersonName"
             android:hint="@string/crush"
             android:ems="10"
-            android:id="@+id/editText2" />
+            android:id="@+id/crush" />
 
         <Button
             android:text="@string/calcula"
