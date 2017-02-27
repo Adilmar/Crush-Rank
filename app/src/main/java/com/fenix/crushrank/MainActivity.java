@@ -3,33 +3,25 @@ package com.fenix.crushrank;
 /**
  * Created by adilmar on 10/02/17.
  */
+
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.appindexing.Thing;
-import com.google.android.gms.common.api.GoogleApiClient;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.HashMap;
-import java.util.Map;
-
-import static android.R.attr.rating;
-import static com.fenix.crushrank.R.id.ratingBar;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -40,8 +32,10 @@ public class MainActivity extends AppCompatActivity {
     String data = "";
     RequestQueue requestQueue;
 
-
     private RatingBar ratingBar;
+    public String name;
+    public String parceiro;
+    public String pfinal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,11 +43,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.load);
 
         Intent intent = getIntent();
-        String name = intent.getStringExtra("my_name");
-        String parceiro=intent.getStringExtra("my_name2");
+        name = intent.getStringExtra("my_name");
+        parceiro=intent.getStringExtra("my_name2");
+
+        Button btShareText = ( Button ) findViewById( R.id.share );
+
 
         String JsonURL="https://love-calculator.p.mashape.com/getPercentage?fname="+name+"&sname="+parceiro;
-        Log.d("xxxxxxxxxxxxxxxxxxx",name);
+        Log.d("Nome",name);
 
         ratingBar = (RatingBar) findViewById(R.id.ratingBar);
         //ratingBar.setRating(3);
@@ -77,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                             String porcentagem = response.getString("percentage");
                             String resultado = response.getString("result");
 
-
+                            pfinal = response.getString("percentage");
                             int por = Integer.parseInt(porcentagem);
                             por = por / 10;
 
@@ -114,6 +111,8 @@ public class MainActivity extends AppCompatActivity {
                         catch (JSONException e) {
 
                             e.printStackTrace();
+                            Toast.makeText(getApplicationContext(),
+                                    "Sem Conexão, tente novamente!", Toast.LENGTH_SHORT).show();
                         }
                     }
                 },
@@ -126,11 +125,26 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-
-
-
-
         requestQueue.add(obreq);
+
+        btShareText.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick( View v ) {
+                shareText();
+            }
+        } );
+    }
+
+    private void shareText() {
+        // cria a intent e define a ação
+        Intent intent = new Intent( Intent.ACTION_SEND );
+        // tipo de conteúdo da intent
+        intent.setType( "text/plain" );
+        // string a ser enviada para outra intent
+        intent.putExtra( Intent.EXTRA_TEXT, "Crush Rank: Você sabia que:"+name+"&"+parceiro+" tem "+pfinal+"%"+" chaces de darem certo <3"
+                +"\n"+"https://play.google.com/store/apps/details?id=com.fenix.chrushrank" );
+        // inicia a intent
+        startActivity( intent );
     }
 }
 
